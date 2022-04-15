@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+@keyframes changeTextOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,6 +25,14 @@ body {
   margin: 0px;
 }
 
+h3 {
+  margin: 0px 0px 20px;
+
+  color: white;
+  font-size: 24px;
+  opacity: 0;
+}
+
 .container {
   display: flex;
   margin: 0px 25px;
@@ -26,7 +43,12 @@ body {
 
 [class*='panel'] {
   height: 900px;
+  width: 75px;
   flex: 0.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -36,12 +58,18 @@ body {
 
   transition: all 700ms ease-in;
 }
-[class*='panel'].active {
-  width: 90vw;
-  flex: 6;
-}
 [class*='panel']:not(:last-child) {
   margin-right: 25px;
+}
+[class*='panel'].active {
+  width: calc(100vw - 4 * 100px - 50px);
+  flex: 6;
+}
+[class*='panel'].active > h3 {
+  opacity: 1;
+
+  animation-name: changeTextOpacity;
+  animation-duration: 3000ms;
 }
 
 .panel1 {
