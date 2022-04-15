@@ -42,7 +42,7 @@ h3 {
 }
 
 [class*='panel'] {
-  height: 900px;
+  height: 90vh;
   width: 75px;
   flex: 0.5;
 
@@ -55,6 +55,7 @@ h3 {
   background-size: cover;
   border-radius: 30px;
   cursor: pointer;
+  overflow: hidden;
 
   transition: all 700ms ease-in;
 }
