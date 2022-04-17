@@ -64,7 +64,7 @@ h3 {
 }
 [class*='panel'].active {
   width: calc(100vw - 4 * 100px - 50px);
-  flex: 6;
+  flex: 5;
 }
 [class*='panel'].active > h3 {
   opacity: 1;
