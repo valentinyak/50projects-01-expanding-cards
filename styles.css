@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-@keyframes changeTextOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -72,8 +63,7 @@ h3 {
 [class*='panel'].active > h3 {
   opacity: 1;
 
-  animation-name: changeTextOpacity;
-  animation-duration: 3000ms;
+  transition: opacity 2000ms ease-in;
 }
 
 .panel1 {
